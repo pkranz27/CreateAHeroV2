@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+<th:block th:replace="/fragments/header"></th:block>
+</head>
+<body>
+<div th:replace="/fragments/navbar" text="hero.firstname"></div>
+<H1>My Certfications</H1>
+	<div class="container text-center">
+  <div class="row">
+    <div class="col-6 col-sm-4"><a target="_blank" href="https://verified.sertifier.com/en/verify/60617680367210/">
+          <img src="https://verified-bucket.s3.eu-central-1.amazonaws.com/cert/60617680367210.png" alt="">
+        </a></div>
+
+    <!-- Force next columns to break to new line at md breakpoint and up -->
+    <div class="w-100 d-none d-md-block"></div>
+	<hr><hr>
+    <div class="col-6 col-sm-4"><a target="_blank" href="https://verified.sertifier.com/en/verify/95379853853760/">
+          <img src="https://verified-bucket.s3.eu-central-1.amazonaws.com/cert/95379853853760.png" alt="">
+        </a></div>
+    <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+  </div>
+</div>
+	<div th:replace="/fragments/footer"></div>
+</body>
+</html>

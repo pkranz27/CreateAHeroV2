@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+	<head>
+		<th:block th:replace="/fragments/header"></th:block>
+	</head>
+	<body>
+		<div th:replace="/fragments/navbar" ></div>
+		<div th:replace="/fragments/mainherotabs" ></div>
+		<div class="container">
+		<h1>Inventory</h1><i class="bi bi-stars"></i>
+		
+  			<div class="row row-cols-3 container  " >
+    			<div class="col-sm-2" >
+    				<div class="container" th:each="currentHeroInventory:${heroInventory}">
+    					<hr>
+    					<button id="pop" style="position: relative;" type="button" class="btn btn-secondary" data-bs-placement="right" data-bs-container="body" data-bs-toggle="popover"  >
+    					<img  class="rounded float-start" th:src="${currentHeroInventory.image}" height="100px" width="100px"  alt="..." ><h6 th:text="${currentHeroInventory.name}"></h6>
+    					</button>
+    					<span th:text="${currentHeroInventory.description}"></span>
+    					<span th:text="${currentHeroInventory.might}"></span>
+    					<span>Intellegence</span>
+    					<span th:text="${currentHeroInventory.intellegence}"></span>
+     				</div>
+    			
+    			</div>
+    		</div>	
+		</div>	
+		<br>
+		<div th:replace="/fragments/footer"></div>
+	</body>
+</html>
